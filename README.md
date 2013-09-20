@@ -29,7 +29,7 @@ Be careful what classes you include, as the metrics will be stored in memory and
 
 Building
 --------
-`git clone
+`git clone http://github.com/coder36/jacoco-merge.git
 mvn clean install`
 
 
