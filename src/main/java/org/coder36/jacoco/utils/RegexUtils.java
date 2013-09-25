@@ -18,7 +18,7 @@ public class RegexUtils {
      * @return
      */
     public static String [] extract( String str, String regEx ) {
-        Pattern p = Pattern.compile( "(.*):(\\d{4})" );
+        Pattern p = Pattern.compile( regEx );
         Matcher m = p.matcher(str);
 
         List<String> l = new ArrayList<String>();

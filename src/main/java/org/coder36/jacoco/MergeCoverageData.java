@@ -28,7 +28,12 @@ public class MergeCoverageData {
         String reportClassDir = null;
 
         for( String arg: args ) {
-            if ( arg.startsWith(URL) ) urls.add( arg.substring(URL.length()) );
+            if ( arg.startsWith(URL) ) {
+                String [] urlList = arg.substring(URL.length()).split( "(,)" );
+                for ( String url: urlList ) {
+                    urls.add( url );
+                }
+            }
             if ( arg.startsWith(FILE) ) files.add( arg.substring(FILE.length()) );
             if ( arg.startsWith(OUT) ) outFile = arg.substring(OUT.length());
             if ( arg.startsWith(REPORT_DIR) ) reportOutDir = arg.substring(REPORT_DIR.length());

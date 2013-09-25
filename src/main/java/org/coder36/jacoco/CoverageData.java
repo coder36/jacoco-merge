@@ -28,7 +28,7 @@ public class CoverageData {
 
     public void readFromAgent(String url, boolean resetCounters) {
 
-        String [] args = RegexUtils.extract( url, "(.*):(\\d{4})" );
+        String [] args = RegexUtils.extract( url, "(.*):(\\d+)" );
         String host = args[0];
         int port = Integer.parseInt(args[1]);
 
